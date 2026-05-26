@@ -6,6 +6,7 @@ Upload the contents of this folder to a GitHub repository root.
 
 - `index.html`
 - `morning.html`
+- `evening.html`
 - `weekly.html`
 - `pdf/morning.pdf`
 - `pdf/weekly.pdf`
@@ -32,6 +33,7 @@ If the repository is named `korea-market-report`, the links usually look like:
 ```text
 https://<github-user>.github.io/korea-market-report/
 https://<github-user>.github.io/korea-market-report/morning.html
+https://<github-user>.github.io/korea-market-report/evening.html
 https://<github-user>.github.io/korea-market-report/weekly.html
 https://<github-user>.github.io/korea-market-report/pdf/morning.pdf
 https://<github-user>.github.io/korea-market-report/pdf/weekly.pdf
