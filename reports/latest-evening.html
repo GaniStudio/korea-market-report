@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>국장노트 · 코스피 신고가, 시장 내부는 쏠림 경고</title>
+  <meta name="description" content="미국 뉴스는 많은데, 그래서 한국장은? · 한국장 중심 데일리 머니플로우 브리프">
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+    * { box-sizing: border-box; }
+    :root {
+      --bg:#0A0E14; --card:#131820; --card2:#1A212C; --line:rgba(255,255,255,.08);
+      --text:#F2F4F6; --muted:#A9B2BE; --faint:#6B7684; --up:#4ADE80; --down:#FB7185;
+      --amber:#FBBF24; --mint:#5EEAD4; --violet:#C4B5FD; --blue:#60A5FA;
+    }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:'Pretendard Variable',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; line-height:1.55; }
+    main { width:min(100%,420px); margin:0 auto; padding:18px 14px 42px; }
+    a { color:inherit; }
+    .topbar { padding:18px 4px 12px; display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+    .brand { font-weight:900; font-size:22px; letter-spacing:0; }
+    .brand-sub { margin-top:3px; color:var(--muted); font-size:12px; }
+    .date { color:var(--amber); font-size:12px; font-weight:800; white-space:nowrap; }
+    .hero { padding:22px 18px; border:1px solid rgba(251,191,36,.28); border-radius:18px; background:linear-gradient(160deg,rgba(251,191,36,.16),rgba(19,24,32,.96) 58%); box-shadow:0 18px 50px rgba(0,0,0,.3); }
+    .kicker { color:var(--amber); font-size:12px; font-weight:900; margin-bottom:8px; }
+    h1 { margin:0; font-size:27px; line-height:1.18; letter-spacing:0; }
+    .lede { margin:12px 0 0; color:#D7DEE8; font-size:15px; }
+    section { margin-top:18px; }
+    .section-head { display:flex; justify-content:space-between; align-items:center; margin:0 2px 9px; }
+    .section-head h2 { margin:0; font-size:17px; }
+    .tag { display:inline-flex; align-items:center; border:1px solid var(--line); border-radius:999px; padding:5px 9px; color:var(--muted); font-size:11px; font-weight:800; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .metric { min-height:104px; padding:14px; border:1px solid var(--line); border-radius:16px; background:var(--card); }
+    .metric:first-child { grid-column:1 / -1; background:linear-gradient(160deg,rgba(94,234,212,.14),rgba(19,24,32,.98) 62%); }
+    .metric-title { color:var(--muted); font-size:12px; font-weight:800; }
+    .metric-value { margin-top:7px; font-size:25px; line-height:1.1; font-weight:900; }
+    .metric-sub { margin-top:6px; color:var(--muted); font-size:12px; font-weight:800; }
+    .metric.up .metric-sub { color:var(--up); } .metric.down .metric-sub { color:var(--down); }
+    .card { padding:16px; border:1px solid var(--line); border-radius:16px; background:var(--card); }
+    .review { background:linear-gradient(160deg,rgba(196,181,253,.16),rgba(19,24,32,.98) 68%); }
+    .review-title { color:var(--violet); font-weight:900; font-size:13px; }
+    .review-line { margin-top:10px; font-size:15px; font-weight:800; }
+    .review p,.card p { margin:9px 0 0; color:#D2D9E3; font-size:14px; }
+    .split { display:grid; gap:10px; }
+    .label-line { color:var(--muted); font-size:12px; font-weight:800; margin-bottom:4px; }
+    .verdict { margin-top:12px; padding:12px; border-radius:14px; background:rgba(251,113,133,.11); color:#FFD3DA; font-weight:850; }
+    .attention { border-color:rgba(251,191,36,.22); background:linear-gradient(160deg,rgba(251,191,36,.12),rgba(19,24,32,.98) 68%); }
+    ul { margin:10px 0 0; padding-left:18px; color:#D7DEE8; }
+    li { margin:6px 0; }
+    .news-list { display:grid; gap:10px; }
+    .news-card { padding:15px; border:1px solid var(--line); border-radius:16px; background:var(--card); }
+    .news-card h3 { margin:0; font-size:16px; line-height:1.35; }
+    .news-card p { margin:8px 0 0; color:#D7DEE8; font-size:14px; }
+    .why { margin-top:10px; color:var(--mint); font-size:13px; font-weight:800; }
+    .source-row { margin-top:12px; display:flex; justify-content:space-between; align-items:center; gap:10px; color:var(--faint); font-size:12px; }
+    .source-button { flex:0 0 auto; text-decoration:none; border:1px solid rgba(96,165,250,.35); border-radius:999px; padding:7px 10px; color:#BFDBFE; font-weight:850; }
+    details { border:1px solid var(--line); border-radius:16px; background:var(--card); overflow:hidden; }
+    summary { cursor:pointer; padding:16px; font-weight:900; }
+    .details-body { padding:0 16px 16px; color:#D7DEE8; }
+    .prob-card { padding:16px; border:1px solid var(--line); border-radius:16px; background:linear-gradient(160deg,rgba(94,234,212,.10),rgba(19,24,32,.98) 70%); }
+    .prob-row { margin-top:12px; }
+    .prob-row:first-child { margin-top:0; }
+    .prob-head { display:flex; justify-content:space-between; font-size:14px; font-weight:900; }
+    .bar { height:9px; margin-top:8px; border-radius:999px; background:rgba(255,255,255,.08); overflow:hidden; }
+    .bar span { display:block; height:100%; border-radius:999px; }
+    .bar .rise { background:var(--up); } .bar .flat { background:var(--amber); } .bar .fall { background:var(--down); }
+    .scenario-label { margin-top:12px; color:var(--muted); font-size:12px; font-weight:800; }
+    footer { margin-top:22px; padding:16px; color:var(--muted); font-size:12px; text-align:center; border-top:1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <div>
+        <div class="brand">국장노트</div>
+        <div class="brand-sub">미국 뉴스는 많은데, 그래서 한국장은?<br>한국장 중심 데일리 머니플로우 브리프</div>
+      </div>
+      <div class="date">2026-05-27 Evening</div>
+    </header>
+
+    <section class="hero">
+      <div class="kicker">EVENING BRIEF</div>
+      <h1>코스피 신고가, 시장 내부는 쏠림 경고</h1>
+      <p class="lede">코스피는 삼성전자·SK하이닉스 중심 반도체 랠리로 신고가를 다시 썼지만, 코스닥 급락과 하락 종목 압도는 시장 내부가 강하지 않았다는 경고를 남겼습니다.</p>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>핵심 시장 지표</h2><span class="tag">Korea-first</span></div>
+      <div class="grid"><article class="metric up"><div class="metric-title">KOSPI</div><div class="metric-value">8,228.70</div><div class="metric-sub">+181.19 · +2.25%</div></article>
+<article class="metric down"><div class="metric-title">KOSDAQ</div><div class="metric-value">1,133.13</div><div class="metric-sub">-39.39 · -3.36%</div></article>
+<article class="metric neutral"><div class="metric-title">USD/KRW</div><div class="metric-value">1,501.20</div><div class="metric-sub">-3.10 KRW</div></article>
+<article class="metric up"><div class="metric-title">SK hynix</div><div class="metric-value">2,243,000</div><div class="metric-sub">+9.31%</div></article>
+<article class="metric up"><div class="metric-title">Samsung Electronics</div><div class="metric-value">307,000</div><div class="metric-sub">+2.68%</div></article></div>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>예측 복기</h2><span class="tag">Fact / Review</span></div>
+      <article class="card review">
+        <div class="review-title">오전 예측: 상승 42% · 보합 33% · 하락 25%</div>
+        <div class="review-line">결과: 부분 적중</div>
+        <p>오전 예측은 코스피 방향성만 보면 맞았지만, 시장 전체 흐름까지 보면 절반만 맞은 예측입니다. 코스피는 +2.25% 상승했지만, 상승 종목은 75개뿐이었고 코스닥은 -3.36% 급락했습니다.</p>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>민심 과열 + 실제 확산 부족</h2><span class="tag">민심 X 데이터</span></div>
+      <article class="card split">
+        <div><div class="label-line">시장 민심</div><p>반도체/AI 랠리 기대와 수급 경고가 동시에 확대</p></div>
+        <div><div class="label-line">실제 시장</div><p>지수 상승은 대형 반도체에 집중, 코스닥과 중소형주는 약세</p></div>
+        <div class="verdict">지수는 강했지만 시장 전체는 강하지 않았다</div>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>YouTube 시장 민심</h2><span class="tag">public narrative only</span></div>
+      <article class="card attention">
+        <div class="label-line">시장 민심 / public narrative only</div>
+        <p>영상형 경제 콘텐츠는 검증된 시장 사실이 아니라 관심과 반복 내러티브를 보는 보조 레이어입니다.</p>
+        <ul><li>유튜브 민심은 삼전닉스 랠리, 2배 ETF, 코스피 신고가, 코스닥은 왜 못 가나, 수급 쏠림 경고로 모였습니다.</li><li>이 민심은 코스피와 반도체 랠리라는 headline에는 부합했지만, 시장 전체가 강했다는 의미는 아닙니다.</li><li>영상 제목과 검색 메타데이터는 관심 신호로만 사용하며, 검증된 시장 사실로 보지 않습니다.</li></ul>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>한국 뉴스</h2><span class="tag">source linked</span></div>
+      <div class="news-list"><article class="news-card"><h3>코스피 신고가와 코스닥 급락</h3><p>KOSPI는 8,228.70으로 신고가를 다시 썼지만 KOSDAQ은 1,133.13으로 -3.36% 하락했습니다.</p><div class="why">오늘 장세의 핵심은 지수 강세와 내부 약세가 동시에 나타났다는 점입니다.</div><div class="source-row"><span>연합인포맥스</span><a class="source-button" href="https://news.einfomax.co.kr/news/articleView.html?idxno=4416974" target="_blank" rel="noopener">출처 열기</a></div></article>
+<article class="news-card"><h3>코스피 상승 사이드카 발생</h3><p>KOSPI200 선물 급등으로 프로그램 호가가 5분간 멈추는 변동성 완화 장치가 작동했습니다.</p><div class="why">개장 초반 반도체 중심 상승 압력이 얼마나 강했는지 보여주는 시장 구조 신호입니다.</div><div class="source-row"><span>뉴시스</span><a class="source-button" href="https://www.newsis.com/view/NISX20260527_0003645277" target="_blank" rel="noopener">출처 열기</a></div></article>
+<article class="news-card"><h3>삼성·SK하이닉스 단일종목 레버리지 상품 첫날</h3><p>삼성전자와 SK하이닉스 연계 단일종목 레버리지 상품이 상장 첫날 큰 관심을 받았습니다.</p><div class="why">반도체 대형주 쏠림과 ETF/ETN 회전율을 함께 설명하는 시장 구조 이슈입니다.</div><div class="source-row"><span>연합인포맥스</span><a class="source-button" href="https://news.einfomax.co.kr/news/articleView.html?idxno=4416980" target="_blank" rel="noopener">출처 열기</a></div></article>
+<article class="news-card"><h3>국내 ETF 시가총액 500조원대 진입</h3><p>국내 상장 ETF 시가총액이 500조원대를 넘어선 것으로 보도됐습니다.</p><div class="why">ETF가 한국 주식시장 수급을 움직이는 핵심 채널로 커졌다는 의미입니다.</div><div class="source-row"><span>연합뉴스</span><a class="source-button" href="https://www.yna.co.kr/amp/view/AKR20260527080851008" target="_blank" rel="noopener">출처 열기</a></div></article>
+<article class="news-card"><h3>원/달러 1,501.20원 마감</h3><p>서울 외환시장에서 원/달러 환율은 1,501.20원으로 마감했습니다.</p><div class="why">환율 부담이 완전히 사라진 것은 아니지만, 이날 반도체 랠리를 막는 변수는 아니었습니다.</div><div class="source-row"><span>연합인포맥스</span><a class="source-button" href="https://news.einfomax.co.kr/news/articleView.html?idxno=4416985" target="_blank" rel="noopener">출처 열기</a></div></article>
+<article class="news-card"><h3>금통위 전 채권시장 경계</h3><p>한국 채권시장은 5월 28일 금통위를 앞두고 금리 상승과 커브 플래트닝을 보였습니다.</p><div class="why">주식시장의 흥분과 달리 금리 시장은 정책 이벤트를 앞두고 신중했습니다.</div><div class="source-row"><span>연합인포맥스</span><a class="source-button" href="https://news.einfomax.co.kr/news/articleView.html?idxno=4416993" target="_blank" rel="noopener">출처 열기</a></div></article>
+<article class="news-card"><h3>삼성전자 2026년 임금협약 체결</h3><p>삼성전자 노사는 2026년 임금협약을 체결했습니다.</p><div class="why">핵심 반도체 대형주의 단기 노무 리스크를 낮추는 기업 뉴스입니다.</div><div class="source-row"><span>연합인포맥스</span><a class="source-button" href="https://news.einfomax.co.kr/news/articleView.html?idxno=4416936" target="_blank" rel="noopener">출처 열기</a></div></article>
+<article class="news-card"><h3>HMM 나무호 관련 중동 리스크</h3><p>정부는 HMM 나무호 타격 비행체가 이란 계열 대함미사일일 가능성이 크다고 밝혔습니다.</p><div class="why">유가, 해운, 환율, 지정학 리스크를 통해 한국 시장에 간접 영향을 줄 수 있는 사안입니다.</div><div class="source-row"><span>연합뉴스</span><a class="source-button" href="https://www.yna.co.kr/amp/view/AKR20260527142651504" target="_blank" rel="noopener">출처 열기</a></div></article></div>
+    </section>
+
+    <section>
+      <details>
+        <summary>글로벌 맥락 펼치기</summary>
+        <div class="details-body">
+          <p>한국 마감 이후 글로벌 환경은 미국 선물, AI 반도체 내러티브, 낮아진 유가, 완만한 금리·달러 흐름이 지지적이었지만, 미국 현물지수는 직전 거래일 기준이고 글로벌 변수는 보조 맥락으로만 봐야 합니다.</p>
+          <ul><li>U.S. futures were mildly positive before the U.S. regular cash open.</li><li>U.S. cash indices are prior-session data, not a fresh 2026-05-27 regular-session close.</li><li>U.S. 10Y was around 4.46%, and DXY was around 99.09.</li><li>WTI and Brent were lower, easing some cost pressure but not removing Middle East risk.</li><li>STOXX600 was mildly positive intraday.</li><li>AI/semiconductor global news is the most Korea-relevant global item.</li></ul>
+          <p><strong>글로벌 AI 반도체 모멘텀</strong><br>Reuters reported AI-related optimism and SK hynix market-cap attention, which directly supports Korea&#x27;s semiconductor-led narrative.</p>
+          <a class="source-button" href="https://www.reuters.com/world/asia-pacific/sk-hynix-market-capitalisation-tops-1-trln-2026-05-27/" target="_blank" rel="noopener">출처 열기</a>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>내일 시나리오</h2><span class="tag">probability</span></div>
+      <article class="prob-card">
+        <div class="prob-row"><div class="prob-head"><span>상승 가능성 38%</span><strong>38%</strong></div><div class="bar"><span class="rise" style="width:38%"></span></div></div>
+        <div class="prob-row"><div class="prob-head"><span>보합 가능성 34%</span><strong>34%</strong></div><div class="bar"><span class="flat" style="width:34%"></span></div></div>
+        <div class="prob-row"><div class="prob-head"><span>하락 가능성 28%</span><strong>28%</strong></div><div class="bar"><span class="fall" style="width:28%"></span></div></div>
+        <div class="scenario-label">내부 시장 시나리오 분석, 투자 권유 아님</div>
+        <ul><li>상승 요인: 삼성전자·SK하이닉스 중심 반도체 랠리와 글로벌 AI 메모리 내러티브 지속</li><li>보합 요인: 코스피 신고가 이후 고점 대비 밀림, 상승 종목 수 부족, 반도체 집중 부담</li><li>하락 요인: 코스닥 급락, 기관/외국인 수급 부담, 단일종목 레버리지 상품 쏠림 후 차익실현 가능성</li><li>핵심 변수: 반도체 쏠림이 시장 확산으로 이어질지, 아니면 차익실현으로 바뀔지</li></ul>
+      </article>
+    </section>
+
+    <footer>
+      본 리포트는 투자 권유가 아니라 시장 흐름 분석 자료입니다. 개별 종목 행동 지시나 수익 약속을 제공하지 않습니다.
+    </footer>
+  </main>
+</body>
+</html>
