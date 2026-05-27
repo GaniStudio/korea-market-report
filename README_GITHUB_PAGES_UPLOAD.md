@@ -1,49 +1,34 @@
 # GitHub Pages Upload Guide
 
-Upload the contents of this folder to a GitHub repository root.
-
-## Files To Upload
-
-- `index.html`
-- `morning.html`
-- `evening.html`
-- `weekly.html`
-- `pdf/morning.pdf`
-- `pdf/weekly.pdf`
-
-Do not upload the full internal package.
-
-## Method A: GitHub Web Upload
-
-1. Create a new GitHub repository.
-2. Upload every file and folder inside `public_github_pages_site`.
-3. Go to repository `Settings`.
-4. Open `Pages`.
-5. Under `Build and deployment`, set:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-6. Save.
-7. Wait until GitHub shows the Pages URL.
-
-## Final Links
-
-If the repository is named `korea-market-report`, the links usually look like:
+Upload the contents of this folder to the repository root:
 
 ```text
-https://<github-user>.github.io/korea-market-report/
-https://<github-user>.github.io/korea-market-report/morning.html
-https://<github-user>.github.io/korea-market-report/evening.html
-https://<github-user>.github.io/korea-market-report/weekly.html
-https://<github-user>.github.io/korea-market-report/pdf/morning.pdf
-https://<github-user>.github.io/korea-market-report/pdf/weekly.pdf
+GaniStudio/korea-market-report
 ```
 
-## PDF-Only Option
+Do not upload the full internal project folder.
 
-If you only want PDF sharing, upload only:
+## Files Updated For 2026-05-27
 
-- `pdf/morning.pdf`
-- `pdf/weekly.pdf`
+- `index.html`
+- `reports/2026-05-27_evening_report.html`
+- `reports/latest-evening.html`
 
-But the recommended phone-reading flow is still `index.html` -> mobile HTML.
+## Expected URLs
+
+- https://ganistudio.github.io/korea-market-report/
+- https://ganistudio.github.io/korea-market-report/reports/2026-05-27_evening_report.html
+- https://ganistudio.github.io/korea-market-report/reports/latest-evening.html
+
+## Upload Rule
+
+Only upload the contents of `public_github_pages_site/`.
+
+Do not upload:
+
+- `data_input/`
+- validation documents
+- internal metadata
+- source logs
+- local scripts
+- raw collector files
